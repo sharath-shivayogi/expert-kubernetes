@@ -1,0 +1,18 @@
+apiversion: v1
+kind: pod
+metadata:
+  name: arpitha-pod
+spec:
+  containers:
+  - name: sharath
+    image: nginx
+    ports:
+    - containerport: 80
+
+        ---
+apiversion: v1
+kind: service
+metadata:
+  name: my-svc
+spec:
+  selector: arpith-pod        
